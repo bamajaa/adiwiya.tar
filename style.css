@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,6 +31,7 @@ body {
     line-height: 1.6;
     position: relative;
     width: 100%;
+    user-select: none;
 }
 
 .s-hero {
@@ -99,6 +101,12 @@ body {
     transition: transform 0.4s ease;
 }
 
+.bx-logo img {
+    height: 100px;
+    width: auto;
+    border-radius: 80%;
+}
+
 .bx-logo:hover {
     transform: rotate(5deg) scale(1.1);
 }
@@ -154,6 +162,20 @@ body {
 .a-lnk:hover::after {
     opacity: 1;
     transform: translateY(0);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: var(--text-ink);
+    border-radius: 2px;
 }
 
 .w-hero {
@@ -688,6 +710,9 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .hamburger {
+        margin-top: 10px;
+    }
 
     .w-hero {
         flex-direction: column;
@@ -751,6 +776,35 @@ body {
     .i-nm:hover {
         transform: translateY(-2px);
     }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nv-main {
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        background: white;
+        box-shadow: 0 10px 20px lightgray;
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+    }
+
+    .nv-main.active {
+        display: block;
+    }
+
+    .u-lnk {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .l-itm {
+        padding: 15px 25px;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -774,8 +828,15 @@ body {
         font-size: 2rem;
     }
 
+    .nv-main {
+        /* display: block; */
+        margin-left: -400px;
+    }
+
     .u-lnk {
-        display: none; 
+        /* display: none;  */
+        /* margin-top: -50px; */
+       
     }
 
     .w-nav {
@@ -785,7 +846,39 @@ body {
     .bx-logo:hover {
         transform: none;
     }
+
+    .hamburger {
+        display: flex;
+        margin-right: -400px;
+        margin-top: -10px;
+    }
+
+    .nv-main {
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        background: white;
+        box-shadow: 0 10px 20px lightgray;
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+    }
+
+    .nv-main.active {
+        display: block;
+    }
+
+    .u-lnk {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .l-itm {
+        padding: 15px 25px;
+    }
 }
+
+    
 
 .w-grid:hover > :not(:hover) {
     opacity: 0.6;
@@ -817,6 +910,7 @@ body {
 ::-webkit-scrollbar-track {
     background: whitesmoke; 
 }
+
  
 ::-webkit-scrollbar-thumb {
     background: silver; 
