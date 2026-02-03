@@ -8,32 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
     <header id="top-bar">
-        <div class="w-nav">
-            <div class="bx-logo">
-                <img src="logo.png" alt="Boedoet" class="im-s">
-            </div>
-            <nav class="nv-main">
-                <ul class="u-lnk">
-                    <li class="l-itm">
-                        <a href="#intro" class="a-lnk">BERANDA</a>
-                    </li>
-                    <li class="l-itm">
-                        <a href="#vision" class="a-lnk">VISI KAMI</a>
-                    </li>
-                    <li class="l-itm">
-                        <a href="#divs" class="a-lnk">DIVISI</a>
-                    </li>
-                    <li class="l-itm">
-                        <a href="#squad" class="a-lnk">PASUKAN</a>
-                    </li>
-                </ul>
-            </nav>
+    <div class="w-nav">
+        <div class="bx-logo">
+            <img src="logo.png" alt="Boedoet" class="im-s">
         </div>
-    </header>
+
+        <div class="hamburger" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <nav class="nv-main">
+            <ul class="u-lnk">
+                <li class="l-itm"><a href="#intro" class="a-lnk">BERANDA</a></li>
+                <li class="l-itm"><a href="#vision" class="a-lnk">VISI KAMI</a></li>
+                <li class="l-itm"><a href="#divs" class="a-lnk">DIVISI</a></li>
+                <li class="l-itm"><a href="#squad" class="a-lnk">PASUKAN</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
    <main id="core">
         <section id="intro" class="s-hero">
